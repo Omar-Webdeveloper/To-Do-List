@@ -56,7 +56,6 @@ function displayProducts() {
 
     Tasks.forEach(task => {
         const card = document.createElement('div');
-  
         card.className = "card shadow-sm p-3 mb-3";
             card.innerHTML = `
                 <h5 class="card-title"><strong>Tiltle:</strong> ${task.title}</h5>
