@@ -1,26 +1,22 @@
-interface Task {
-id: number;
-title: string;
-states: string;
-startDate: string;
-endDate: string;
-}  
-let Count_ID = 0;
-function increment() {
+    interface Task 
+    {
+    id: number;
+    title: string;
+    states: string;
+    startDate: string;
+    endDate: string;
+    }  
+    let Count_ID = 0;
+    function increment() {
     Count_ID += 1;
     document.getElementById("counting")!.innerText = Count_ID.toString();
-}
-document.getElementById('TaskForm')!.addEventListener('submit', function (event) {
+    }
+    document.getElementById('TaskForm')!.addEventListener('submit', function (event) 
+    {
     event.preventDefault(); // Prevent the form from submitting the traditional way
-
-
-
-
-increment()
-console.log("ssssssss",Count_ID)
-document.getElementById("counting")!.innerText = Count_ID.toString();
-
-
+    increment()
+    console.log("ssssssss",Count_ID)
+    document.getElementById("counting")!.innerText = Count_ID.toString();
     const id = Count_ID;
     const title = (document.getElementById('title') as HTMLInputElement).value;
     const select: HTMLSelectElement = document.getElementById('states') as HTMLSelectElement;
@@ -45,7 +41,8 @@ document.getElementById("counting")!.innerText = Count_ID.toString();
 
     // Clear the form
     (document.getElementById('TaskForm') as HTMLFormElement).reset();
-});
+    }
+);
 
 function displayProducts() {
     const TasksCards = document.getElementById('TasksCards')!;
