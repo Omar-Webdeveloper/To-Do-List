@@ -15,7 +15,6 @@
     {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     increment()
-    console.log("ssssssss",Count_ID)
     document.getElementById("counting")!.innerText = Count_ID.toString();
     const id = Count_ID;
     const title = (document.getElementById('title') as HTMLInputElement).value;

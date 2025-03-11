@@ -6,7 +6,6 @@ function increment() {
 document.getElementById('TaskForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     increment();
-    console.log("ssssssss", Count_ID);
     document.getElementById("counting").innerText = Count_ID.toString();
     var id = Count_ID;
     var title = document.getElementById('title').value;
@@ -34,13 +33,6 @@ function displayProducts() {
     var Tasks = JSON.parse(localStorage.getItem('Tasks') || '[]');
     Tasks.forEach(function (task) {
         var card = document.createElement('div');
-        // card.className = 'Task-card';
-        // card.innerHTML = `
-        //     <p>title: ${task.title}</p>
-        //     <p>states: ${task.states}</p>
-        //     <p>startDate: ${task.startDate}</p>
-        //     <p>endDate: ${task.endDate}</p>
-        // `;
         card.className = "card shadow-sm p-3 mb-3";
         card.innerHTML = "\n                <h5 class=\"card-title\"><strong>Tiltle:</strong> ".concat(task.title, "</h5>\n                <p class=\"card-text\"><strong>State:</strong> ").concat(task.states, "</p>\n                <p class=\"card-text\"><strong>Start Date:</strong> ").concat(task.startDate, "</p>\n                <p class=\"card-text\"><strong>End Date:</strong> ").concat(task.endDate, "</p>\n            ");
         TasksCards.appendChild(card);
