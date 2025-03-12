@@ -1,13 +1,13 @@
 var Count_ID = 0;
+var ID_1;
 function increment() {
     Count_ID += 1;
-    document.getElementById("counting").innerText = Count_ID.toString();
+    ID_1 = Count_ID;
 }
 document.getElementById('TaskForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     increment();
-    document.getElementById("counting").innerText = Count_ID.toString();
-    var id = Count_ID;
+    var id = ID_1;
     var title = document.getElementById('title').value;
     var select = document.getElementById('states');
     var states = select.options[select.selectedIndex].value;

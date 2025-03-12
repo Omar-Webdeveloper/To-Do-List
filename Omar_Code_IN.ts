@@ -7,16 +7,16 @@
     endDate: string;
     }  
     let Count_ID = 0;
+    let ID_1 ;
     function increment() {
     Count_ID += 1;
-    document.getElementById("counting")!.innerText = Count_ID.toString();
+    ID_1=Count_ID
     }
     document.getElementById('TaskForm')!.addEventListener('submit', function (event) 
     {
     event.preventDefault(); // Prevent the form from submitting the traditional way
     increment()
-    document.getElementById("counting")!.innerText = Count_ID.toString();
-    const id = Count_ID;
+    const id = ID_1;
     const title = (document.getElementById('title') as HTMLInputElement).value;
     const select: HTMLSelectElement = document.getElementById('states') as HTMLSelectElement;
     const states = select.options[select.selectedIndex] .value;
